@@ -1,0 +1,47 @@
+﻿{
+  "value": 0,
+  "neighbors":[
+    {
+      "value": 10,
+      "neighbors": [
+        {
+          "value": 11,
+          "neighbors": [
+            {
+              "value": 12,
+              "neighbors": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": 20,
+      "neighbors": [
+        {
+          "value": 21,
+          "neighbors": [
+            {
+              "value": 22,
+              "neighbors": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "value": 30,
+      "neighbors": [
+        {
+          "value": 31,
+          "neighbors": [
+            {
+              "value": 32,
+              "neighbors": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
