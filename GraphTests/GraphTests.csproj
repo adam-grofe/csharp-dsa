@@ -22,4 +22,10 @@
     <ProjectReference Include="..\Graph\Graph.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="graph_1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

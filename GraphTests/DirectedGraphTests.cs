@@ -1,4 +1,9 @@
 ﻿using Graph;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using Xunit;
+
 namespace GraphTests;
 
 public class DirectedGraphTests
@@ -8,7 +13,7 @@ public class DirectedGraphTests
     {
         // Arrange
         var graph = new DirectedGraph();
-        string jsonFileName = "C:\\Users\\agrof\\code\\csharp-dsa\\GraphTests\\graph_1.json"; // Path to your test JSON file
+        string jsonFileName = "graph_1.json";
         // Act
         graph.CreateGraphFromJson(jsonFileName);
         // Assert
@@ -20,7 +25,7 @@ public class DirectedGraphTests
     {
         // Arrange
         var graph = new DirectedGraph();
-        string jsonFileName = "C:\\Users\\agrof\\code\\csharp-dsa\\GraphTests\\graph_1.json"; // Path to your test JSON file
+        string jsonFileName = "graph_1.json";
         graph.CreateGraphFromJson(jsonFileName);
         List<int> visitedValues = new List<int>();
         Action<DirectedNode> action = node => visitedValues.Add(node.Value);
@@ -38,7 +43,7 @@ public class DirectedGraphTests
     {
         // Arrange
         var graph = new DirectedGraph();
-        string jsonFileName = "C:\\Users\\agrof\\code\\csharp-dsa\\GraphTests\\graph_1.json"; // Path to your test JSON file
+        string jsonFileName = "graph_1.json";
         graph.CreateGraphFromJson(jsonFileName);
         List<int> visitedValues = new List<int>();
         Action<DirectedNode> action = node => visitedValues.Add(node.Value);
