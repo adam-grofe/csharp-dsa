@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System.Collections;
 namespace Graph;
 
 public class DirectedGraph
@@ -40,14 +39,14 @@ public class DirectedGraph
 
     void ApplyToNodesBreadthFirst(Action<DirectedNode> action)
     {
-        if( rootNode == null)
+        if (rootNode == null)
         {
             return;
         }
 
         Queue<DirectedNode> nodeQueue = new Queue<DirectedNode>();
         nodeQueue.Enqueue(rootNode);
-        while( nodeQueue.Count() > 0)
+        while (nodeQueue.Count() > 0)
         {
             DirectedNode currentNode = nodeQueue.Dequeue();
             action(currentNode);
@@ -63,18 +62,18 @@ public class DirectedGraph
 
     void ApplyToNodesDepthFirst(Action<DirectedNode> action)
     {
-        if( rootNode == null )
+        if (rootNode == null)
         {
             return;
         }
 
         Stack<DirectedNode> nodeStack = new Stack<DirectedNode>();
         nodeStack.Push(rootNode);
-        while( nodeStack.Count() > 0)
+        while (nodeStack.Count() > 0)
         {
             DirectedNode currentNode = nodeStack.Pop();
             action(currentNode);
-            if( currentNode.Neighbors.Count() > 0)
+            if (currentNode.Neighbors.Count() > 0)
             {
                 foreach (DirectedNode node in currentNode.Neighbors)
                 {

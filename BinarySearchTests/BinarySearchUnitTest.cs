@@ -1,14 +1,14 @@
-using Xunit;
-using System.Diagnostics;
 using Binary.Search;
+using System.Diagnostics;
 
 namespace BinarySearchTests
 {
     public class BinarySearchUnitTest
     {
-        void setLogger(string testName){
+        void setLogger(string testName)
+        {
             string logPath = Path.Combine(Environment.CurrentDirectory, $"log-{testName}.txt");
-            TextWriterTraceListener logFile = new (File.CreateText(logPath));
+            TextWriterTraceListener logFile = new(File.CreateText(logPath));
             Trace.Listeners.Add(logFile);
             Trace.AutoFlush = true;
         }
@@ -45,7 +45,7 @@ namespace BinarySearchTests
             var val = 20;
             var result = bs.BinarySearch(l, val);
             Assert.Equal(-1, result);
-           
+
         }
         [Fact]
         public void Test4()
