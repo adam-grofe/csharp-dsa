@@ -1,7 +1,4 @@
-﻿
-using System.Reflection.Metadata.Ecma335;
-
-namespace DynamicProgramming;
+﻿namespace DynamicProgramming;
 
 static public class LongestCommonSubstring
 {
@@ -11,7 +8,7 @@ static public class LongestCommonSubstring
         int m = left.Length;
         int n = right.Length;
 
-        int[,] table = new int[m+1, n+1];
+        int[,] table = new int[m + 1, n + 1];
 
         for (int i = 1; i <= m; i++)
         {
