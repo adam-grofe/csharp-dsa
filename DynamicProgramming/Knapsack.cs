@@ -24,7 +24,7 @@ public static class Knapsack
             {
                 int pick = 0;
 
-                if (weight[i-1] <= j)
+                if (weight[i - 1] <= j)
                 {
                     pick = profit[i - 1] + table[i - 1, j - weight[i - 1]];
                 }
